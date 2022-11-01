@@ -11,7 +11,7 @@ export const usePreloaderTimer = () => {
   useEffect(() => {
     setTimeout(() => {
       setTimer(0)
-    }, 1500);
+    }, 2500);
   }, []);
 
   useEffect(() => {
