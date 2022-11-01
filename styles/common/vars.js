@@ -7,7 +7,8 @@ const QUERIES = {
 
 const COLORS = {
   colorPrimary: '#0000ff',
-  colorSecondary: '#fd652b',
+  // colorSecondary: '#fd652b', //oryginal
+  colorSecondary: '#DE8D14',
   colorWhite: '#EEEEEE',
   colorBlack: '#121212',
   colorLightGray: '#A4A4A4',

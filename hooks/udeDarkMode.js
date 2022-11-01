@@ -2,7 +2,7 @@ import {useEffect, useState} from 'react';
 
 export const useDarkMode = () => {
   const [theme, setTheme] = useState('light');
-  const [bgAnimation, setBgAnimation] = useState('');
+  const [bgAnimation, setBgAnimation] = useState('animateLight');
 
   const toggleTheme = () => {
     if (theme === 'light') {

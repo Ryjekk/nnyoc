@@ -3,8 +3,8 @@ import { globalReset } from './globalReset';
 import { globalFonts } from './globalFonts';
 
 const GlobalStyles = createGlobalStyle`
-  ${globalReset}
   ${globalFonts}
+  ${globalReset}
 `;
 
 export default GlobalStyles;
