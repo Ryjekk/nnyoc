@@ -29,52 +29,17 @@ export default class MyDocument extends Document {
     }
   }
 //---------------------------------------------------//
-//   render() {
-//     return (
-//       <Html lang="en">
-//         <Head>
-//           <link
-//             rel="preload"
-//             href="/fonts/DiatypeSemiMono-Bold.otf"
-//             as="font"
-//             type="font/otf"
-//             crossOrigin=""
-//           />
-//           <link
-//             rel="preload"
-//             href="/fonts/DiatypeSemiMono-Light.otf"
-//             as="font"
-//             type="font/otf"
-//             crossOrigin=""
-//           />
-//           <link
-//             rel="preload"
-//             href="/fonts/DiatypeSemiMono-Medium.otf"
-//             as="font"
-//             type="font/otf"
-//             crossOrigin=""
-//           />
-//           <link
-//             rel="preload"
-//             href="/fonts/DiatypeSemiMono-Regular.otf"
-//             as="font"
-//             type="font/otf"
-//             crossOrigin=""
-//           />
-//           <link
-//             rel="preload"
-//             href="/fonts/DiatypeSemiMono-Thin.otf"
-//             as="font"
-//             type="font/otf"
-//             crossOrigin=""
-//           />
-//           <title>NoNoYesOfCourse</title>
-//         </Head>
-//         <body>
-//         <Main />
-//         <NextScript />
-//         </body>
-//       </Html>
-//     );
-//   }
+  render() {
+    return (
+      <Html lang="en">
+        <Head>
+          <title>NoNoYesOfCourse</title>
+        </Head>
+        <body>
+        <Main />
+        <NextScript />
+        </body>
+      </Html>
+    );
+  }
 }

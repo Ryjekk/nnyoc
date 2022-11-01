@@ -3,7 +3,7 @@ import {ThemeProvider} from "styled-components";
 import {darkMode, lightMode} from "../styles/theme/themeContext";
 import {useDarkMode} from "../hooks/udeDarkMode";
 import {BgThemeAnimation} from "../styles/theme/bgThemeAnimation";
-import CustomCursor from "../components/ui/customCursor/CustomCursor";
+import Cursor from "../components/ui/cursor/Cursor";
 
 const Home = () => {
   const [theme, bgAnimation, toggleTheme] = useDarkMode()
@@ -14,10 +14,10 @@ const Home = () => {
       <GlobalStyles/>
       <BgThemeAnimation animate={whatToAnimate}/>
 
-      <CustomCursor />
+      <Cursor/>
       <button onClick={toggleTheme}>Switch Theme</button>
 
-      {theme}aaaa
+      <p>{theme}</p>aaaa
 
     </ThemeProvider>
   )

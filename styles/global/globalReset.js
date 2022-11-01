@@ -14,6 +14,7 @@ export const globalReset = css`
     -moz-appearance: none;
     position: relative;
     z-index: 99;
+    cursor: none;
   }
 
   html {
@@ -27,7 +28,6 @@ export const globalReset = css`
     margin: 0;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     font-family: 'DiatypeSemiMono', monospace;
-    cursor: none;
   }
 
   body {
