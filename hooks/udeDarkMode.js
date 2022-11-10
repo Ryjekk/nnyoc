@@ -27,8 +27,9 @@ export const useDarkMode = () => {
       window.localStorage.setItem('THEME_MODE', 'light');
     } else {
       setTheme(localMode);
+      localMode === 'dark' && setBgAnimation('animateDark')
     }
-  }, []);
+  }, [theme]);
 
   return [theme, bgAnimation, toggleTheme];
 };

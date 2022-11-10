@@ -13,7 +13,7 @@ export const globalReset = css`
     -webkit-appearance: none;
     -moz-appearance: none;
     position: relative;
-    z-index: 99;
+    //z-index: 99;
     cursor: none;
   }
 

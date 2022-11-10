@@ -1,6 +1,6 @@
 import Image from "next/image";
 import logo from '../../../assets/logo/logo.png'
-import {ImageWrapper, PreloaderHeader, PreloaderWrapper} from "./styles";
+import {ImageWrapper, PreloaderWrapper} from "./styles";
 
 const Preloader = () => {
   const animLogo = {
@@ -42,12 +42,12 @@ const Preloader = () => {
       >
         <Image src={logo} alt='logoOne' width={300} height={300}/>
       </ImageWrapper>
-      <PreloaderHeader
-        initial={animLogo.initial}
-        animate={animLogo.animate}
-      >
-        Iceland / Reykjavík Ingólfsstræti 10
-      </PreloaderHeader>
+      {/*<PreloaderHeader*/}
+      {/*  initial={animLogo.initial}*/}
+      {/*  animate={animLogo.animate}*/}
+      {/*>*/}
+      {/*  Iceland / Reykjavík Ingólfsstræti 10*/}
+      {/*</PreloaderHeader>*/}
     </PreloaderWrapper>
   );
 };

@@ -9,6 +9,7 @@ const CursorEl = styled(motion.div)`
   height: 30px;
   mix-blend-mode: difference;
   pointer-events: none;
+  z-index: 10;
 `;
 
 export {CursorEl}
