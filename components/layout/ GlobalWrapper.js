@@ -3,7 +3,7 @@ import GlobalStyles from "../../styles/global/global";
 import Preloader from "../common/preloader/Preloader";
 import {BgThemeAnimation} from "../../styles/theme/bgThemeAnimation";
 import {ThemeProvider} from "styled-components";
-import {useDarkMode} from "../../hooks/udeDarkMode";
+import {useDarkMode} from "../../hooks/useDarkMode";
 import {usePreloaderTimer} from "../../hooks/usePreloaderTimer";
 import Cursor from "../common/cursor/Cursor";
 

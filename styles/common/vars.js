@@ -27,7 +27,11 @@ const FONTSIZE = {
   m: '18px',
   l: '24px',
   xl: '32px',
-  xxl: '60px'
+  xxl: '55px'
 };
 
-export {QUERIES, COLORS, FONTS, FONTSIZE}
+const SPACING = {
+  basic: '16px 24px',
+}
+
+export {QUERIES, COLORS, FONTS, FONTSIZE, SPACING}

@@ -1,27 +1,18 @@
-import {GridWrapper} from "./styles";
+import {GridWrapper, MainWrapper} from "./styles";
 import Side from "../common/side/Side";
+import {contentChecker} from "../../utils/contentChecker";
 
 const Layout = ({contentType}) => {
+  const {ContentSection, ContentSide} = contentChecker(contentType)
+
   return (
-    <main>
+    <MainWrapper>
       <GridWrapper>
-        <Side />
+        <Side contentSide={ContentSide}/>
+        {ContentSection}
       </GridWrapper>
-    </main>
+    </MainWrapper>
   );
 };
 
 export default Layout;
-
-
-// TODO in layout and components
-// --> Grid -- inn ✅
-//    --> Section -- dynamic rendered based on content type -- component
-//    --> Header  -- component 'SIDE'; ✅
-//        --> Flex -- inn ✅
-//            --> LogoSide -- component ✅
-//            --> ContentSide -- component ✅
-//                --> ItemList || ItemListDetails -- dynamic rendered based on content type -- components
-//                --> Footer -- component ✅
-//                    --> Socials -- component
-//                    --> Created By Inuk -- inn

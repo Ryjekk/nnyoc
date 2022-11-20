@@ -1,13 +1,11 @@
-import {FlexWrapper, HeaderWrapper} from "./styles";
-import LogoSide from "./logoSide/LogoSide";
-import ContentSide from "./contentSide/ContentSide";
+import {FlexWrapper, HeaderWrapper, LogoTextWrapper} from "./styles";
 
-const Side = () => {
+const Side = ({contentSide}) => {
   return (
       <HeaderWrapper>
         <FlexWrapper>
-          <LogoSide />
-          <ContentSide/>
+          <LogoTextWrapper/>
+          {contentSide}
         </FlexWrapper>
       </HeaderWrapper>
   );

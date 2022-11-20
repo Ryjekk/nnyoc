@@ -1,8 +1,8 @@
 const HomeContentSection = () => {
   return (
-    <div>
-      section
-    </div>
+    <section>
+      section home
+    </section>
   );
 };
 
