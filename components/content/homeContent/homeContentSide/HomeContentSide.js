@@ -18,7 +18,7 @@ const HomeContentSide = () => {
           ))}
         </OlItem>
       </div>
-      <Footer/>
+      <Footer />
     </ContentSideWrapper>
   );
 };

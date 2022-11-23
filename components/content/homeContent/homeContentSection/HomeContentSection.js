@@ -1,8 +1,12 @@
+import {ItemsGalleryWrapper, SectionWrapper} from "./styles";
+
 const HomeContentSection = () => {
   return (
-    <section>
-      section home
-    </section>
+    <SectionWrapper>
+      <ItemsGalleryWrapper>
+        section home
+      </ItemsGalleryWrapper>
+    </SectionWrapper>
   );
 };
 

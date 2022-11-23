@@ -8,7 +8,7 @@ import {usePreloaderTimer} from "../../hooks/usePreloaderTimer";
 import Cursor from "../common/cursor/Cursor";
 
 const GlobalWrapper = ({children}) => {
-  const [theme, bgAnimation, toggleTheme] = useDarkMode()
+  const [theme, bgAnimation, toggleTheme] = useDarkMode();
   const whatToAnimate = bgAnimation === 'animateDark' ? 'dark' : bgAnimation === 'animateLight' ? 'light' : '';
   const preloader = usePreloaderTimer();
 

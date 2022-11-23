@@ -4,7 +4,7 @@ import {SPACING} from "../../../../styles/common/vars";
 const FooterWrapper = styled.div`
   border-top: 1px solid ${({theme}) => theme.textColor};
   border-right: 1px solid ${({theme}) => theme.textColor};
-  height: 100px;
+  height: 110px;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;

@@ -22,7 +22,8 @@ export const useDarkMode = () => {
 
   useEffect(() => {
     const localMode = window.localStorage.getItem('THEME_MODE');
-    if (localMode === undefined || localMode === null) {
+
+    if (localMode === undefined || localMode === null || localMode === 'light') {
       setTheme('light');
       window.localStorage.setItem('THEME_MODE', 'light');
     } else {

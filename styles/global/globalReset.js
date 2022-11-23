@@ -32,8 +32,11 @@ export const globalReset = css`
 
   body {
     box-sizing: border-box;
+    // 👇 todo -- undo -- it can cause problem with theme switcher animations
+    overflow: hidden;
     width: 100%;
     height: 100%;
+    // ☝️
     // 1rem == 10px
     font-size: 62.5%;
     overscroll-behavior-y: none;
@@ -41,7 +44,6 @@ export const globalReset = css`
     font-family: 'DiatypeSemiMono', monospace;
     background: ${({theme}) => theme.bgColor};
     color: ${({theme}) => theme.textColor};
-    overflow: hidden;
   }
 
   a {
