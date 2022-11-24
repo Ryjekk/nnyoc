@@ -14,7 +14,7 @@ const FlexWrapper = styled.div`
 
 const LogoTextWrapper = styled.div`
   background-image: url(${logoSide.src});
-  border-right: 1px solid ${({theme}) => theme.textColor};
+  // border-right: 1px solid ${({theme}) => theme.textColor};
    
   min-height: 100vh;
   width: 20vw;

@@ -21,7 +21,6 @@ const GlobalWrapper = ({children}) => {
         : <>
           <BgThemeAnimation animate={whatToAnimate}/>
           <Cursor/>
-          {/*<button onClick={toggleTheme}>Switch Theme</button>*/}
           {children}
         </>
       }

@@ -2,6 +2,7 @@ import styled from "styled-components";
 import {SPACING} from "../../../../styles/common/vars";
 
 const FooterWrapper = styled.div`
+  mix-blend-mode: difference;
   border-top: 1px solid ${({theme}) => theme.textColor};
   border-right: 1px solid ${({theme}) => theme.textColor};
   height: 110px;
@@ -13,6 +14,7 @@ const FooterWrapper = styled.div`
 `;
 
 const FooterWrapperTop = styled.div`
+  mix-blend-mode: difference;
   border-top: 1px solid ${({theme}) => theme.textColor};
   border-right: 1px solid ${({theme}) => theme.textColor};
   height: 120px;

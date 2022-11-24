@@ -54,4 +54,8 @@ export const globalReset = css`
   a:hover {
     cursor: pointer;
   }
+  
+  p, ol, li {
+    mix-blend-mode: difference;
+  }
 `;
