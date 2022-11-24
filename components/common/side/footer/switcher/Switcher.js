@@ -2,10 +2,11 @@ import Image from "next/image";
 import {SwitchBtn} from "./styles";
 import sun from '../../../../../assets/ico/sun.svg'
 import moon from '../../../../../assets/ico/moon.svg'
-import {useDarkMode} from "../../../../../hooks/useDarkMode";
+import {useContext} from "react";
+import {DarkModeContext} from "../../../../../context/DarkModeContext";
 
 const Switcher = () => {
-  const [theme, bgAnimation, toggleTheme] = useDarkMode()
+  const {theme, toggleTheme} = useContext(DarkModeContext)
 
   return (
     <SwitchBtn onClick={toggleTheme}>

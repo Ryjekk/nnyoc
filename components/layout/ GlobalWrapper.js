@@ -3,12 +3,13 @@ import GlobalStyles from "../../styles/global/global";
 import Preloader from "../common/preloader/Preloader";
 import {BgThemeAnimation} from "../../styles/theme/bgThemeAnimation";
 import {ThemeProvider} from "styled-components";
-import {useDarkMode} from "../../hooks/useDarkMode";
 import {usePreloaderTimer} from "../../hooks/usePreloaderTimer";
 import Cursor from "../common/cursor/Cursor";
+import {useContext} from "react";
+import {DarkModeContext} from "../../context/DarkModeContext";
 
 const GlobalWrapper = ({children}) => {
-  const [theme, bgAnimation, toggleTheme] = useDarkMode();
+  const {theme, bgAnimation} = useContext(DarkModeContext)
   const whatToAnimate = bgAnimation === 'animateDark' ? 'dark' : bgAnimation === 'animateLight' ? 'light' : '';
   const preloader = usePreloaderTimer();
 
