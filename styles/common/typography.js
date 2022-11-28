@@ -20,6 +20,8 @@ const TextHeader = styled.p`
 `;
 
 const OlItem = styled.ol`
+  //display: flex;
+  //flex-direction: column;
   list-style: none;
   counter-reset: item;
   margin-top: 16px;

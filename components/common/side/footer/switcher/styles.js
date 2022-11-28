@@ -5,4 +5,5 @@ export const SwitchBtn = styled.div`
   height: 40px;
   margin-bottom: 5px;
   align-self: flex-end;
+  z-index: 1999999 !important;
 `;

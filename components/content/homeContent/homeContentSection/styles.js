@@ -1,13 +1,13 @@
 import styled from "styled-components";
 
 const SectionWrapper = styled.section`
-  position: relative;
+  //position: relative;
 `;
 
 const ItemsGalleryWrapper = styled.div`
-  border: 2px solid green;
-  position: absolute;
-  width: 100vw;
+  //border: 2px solid green;
+  //position: absolute;
+  width: calc(100% + 15vh);
   transform: translateX(-15vh);
 `;
 

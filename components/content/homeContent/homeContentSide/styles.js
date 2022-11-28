@@ -7,6 +7,7 @@ const ContentSideWrapper = styled.div`
   width: 100%;
   mix-blend-mode: difference;
   border-left: 1px solid ${({theme}) => theme.textColor};
+  z-index: 10;
 `;
 
 const SideWrapper = styled.div`
