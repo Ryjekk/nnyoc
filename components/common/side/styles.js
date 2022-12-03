@@ -24,4 +24,14 @@ const LogoTextWrapper = styled.div`
   background-position: top;
 `;
 
-export {HeaderWrapper, FlexWrapper, LogoTextWrapper}
+const ContentSideWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  mix-blend-mode: difference;
+  border-left: 1px solid ${({theme}) => theme.textColor};
+  z-index: 10;
+`;
+
+export {HeaderWrapper, FlexWrapper, LogoTextWrapper, ContentSideWrapper}
