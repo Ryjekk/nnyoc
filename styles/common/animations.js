@@ -8,30 +8,42 @@ const bgDarkAnimation = keyframes`
     top: 0;
     right: 0;
     background-color: ${COLORS.colorBlack};
+    border-bottom-left-radius: 100%;
+  }
+  99.99% {
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    right: 0;
+    background-color: ${COLORS.colorBlack};
+    border-bottom-left-radius: 100%;
+    transform: scale(2.5);
   }
   100% {
-    width: 400vmax;
-    height: 400vmax;
-    top: calc(-250vmax + 3rem);
-    right: calc(-250vmax + 3rem);
-    background-color: ${COLORS.colorBlack};
+    transform: scale(0);
   }
 `;
 
 const bgLightAnimation = keyframes`
   0% {
-    background-color: ${COLORS.colorWhite};
     width: 0;
     height: 0;
     top: 0;
     right: 0;
+    background-color: ${COLORS.colorWhite};
+    border-bottom-left-radius: 100%;
+  }
+  99.99% {
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    right: 0;
+    background-color: ${COLORS.colorWhite};
+    border-bottom-left-radius: 100%;
+    transform: scale(2.5);
   }
   100% {
-    background-color: ${COLORS.colorWhite};
-    width: 400vmax;
-    height: 400vmax;
-    top: calc(-250vmax + 3rem);
-    right: calc(-250vmax + 3rem);
+    transform: scale(0);
   }
 `;
 

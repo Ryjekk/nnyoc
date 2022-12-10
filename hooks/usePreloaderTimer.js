@@ -1,7 +1,9 @@
 import { useEffect, useState } from "react";
+import {useRouter} from "next/router";
 
 export const usePreloaderTimer = () => {
-  const [preloader, setPreloader] = useState(true);
+  const {pathname: p} = useRouter();
+  const [preloader, setPreloader] = useState(p === '/');
   const [timer, setTimer] = useState(1);
 
   const clear = () => {
@@ -11,7 +13,7 @@ export const usePreloaderTimer = () => {
   useEffect(() => {
     setTimeout(() => {
       setTimer(0)
-    }, 2500);
+    }, 1500);
   }, []);
 
   useEffect(() => {

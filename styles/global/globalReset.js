@@ -32,8 +32,9 @@ export const globalReset = css`
 
   body {
     box-sizing: border-box;
-    // 👇 todo -- undo -- it can cause problem with theme switcher animations
-    overflow: hidden;
+    //TODO
+    //TODO -- undo -- it can cause problem with theme switcher animations - huge overflow on bottom of document it connected with bg themeanimation and bg theme
+    //overflow: hidden;
     width: 100%;
     height: 100%;
     // ☝️

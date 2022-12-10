@@ -13,12 +13,11 @@ export const BgThemeAnimation = styled.div`
   position: absolute;
   display: block;
   z-index: -5;
-  background-color: ${({theme}) => theme.bgColor};
-  width: 400vmax;
-  height: 400vmax;
-  top: calc(-250vmax + 3rem);
-  right: calc(-250vmax + 3rem);
-  border-radius: 100%;
-  
+  background-color: red;
+  width: 100vw;
+  height: 100vh;
+  top: -100%;
+  right: 0;
+
   ${props => props.animate === 'light' ? animateGrowWhite : animateGrowDark};
 `;

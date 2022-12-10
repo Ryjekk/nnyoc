@@ -1,7 +1,7 @@
 const CollaborationsContentSection = () => {
     return (
         <div>
-
+            🔥
         </div>
     );
 };

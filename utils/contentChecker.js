@@ -6,15 +6,19 @@ import CollaborationsContentSection
     from "../components/content/collaborationsContent/collaborationsContentSection/CollaborationsContentSection";
 import CollaborationsContentSide
     from "../components/content/collaborationsContent/collaborationsContentSide/CollaborationsContentSide";
+import CollaboratorContentSide
+    from "../components/content/collaboratorContent/collaboratorContentSide/CollaboratorContentSide";
+import CollaboratorContentSection
+    from "../components/content/collaboratorContent/collaboratorContentSection/CollaboratorContentSection";
 
-export const contentChecker = (contentType) => {
+export const contentChecker = (contentType, products) => {
     let ContentSide, ContentSection;
 
     //TODO add itemContent and 404
     switch (contentType) {
         case 'HomeContent':
             ContentSection = <HomeContentSection/>;
-            ContentSide = <HomeContentSide/>
+            ContentSide = <HomeContentSide products={products}/>
             break;
         case 'ItemContent':
             ContentSection = <ItemContentSection/>
@@ -23,6 +27,10 @@ export const contentChecker = (contentType) => {
         case 'CollaborationsContent':
             ContentSection = <CollaborationsContentSection/>
             ContentSide = <CollaborationsContentSide/>
+            break;
+        case 'CollaboratorContent':
+            ContentSection = <CollaboratorContentSection/>
+            ContentSide = <CollaboratorContentSide/>
             break;
         default:
             return;

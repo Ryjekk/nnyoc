@@ -1,16 +1,16 @@
 import {ListItem, ListTextExtra, OlItem} from "../../../../styles/common/typography";
-import {productData} from "../../../../data/productData";
+import Link from "next/link";
 
-const HomeContentSide = () => {
-    const handleClick = (id) => {
-        console.log(id)
-    }
-
+const HomeContentSide = ({products: {data}}) => {
     return (
         <OlItem>
-            {productData.map(el => (
-                <ListItem key={el.id} onClick={() => handleClick(el.id)}>
-                    {el.title} <ListTextExtra>{el.titleExtra}</ListTextExtra>
+            {data.map(el => (
+                <ListItem key={el.id}>
+                    <Link href={`/item/${el.id}`}>
+                        <span>
+                            {el.name} <ListTextExtra>{el.metadata.warning}</ListTextExtra>
+                        </span>
+                    </Link>
                 </ListItem>
             ))}
         </OlItem>

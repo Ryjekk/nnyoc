@@ -26,7 +26,7 @@ const Preloader = () => {
     initial: { opacity: 1 },
     animate: { opacity: 0 },
     transition: {
-      delay: 1.7,
+      delay: 1.2,
       duration: 1
     }
   }

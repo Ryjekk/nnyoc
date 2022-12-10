@@ -10,7 +10,7 @@ const Side = ({contentSide}) => {
                 <Link href="/"><LogoTextWrapper/></Link>
                 <ContentSideWrapper>
                     <div>
-                       <HeadText/>
+                       <HeadText />
                         {contentSide}
                     </div>
                     <Footer/>

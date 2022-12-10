@@ -2,8 +2,8 @@ import {GridWrapper, MainWrapper} from "./styles";
 import Side from "../common/side/Side";
 import {contentChecker} from "../../utils/contentChecker";
 
-const Layout = ({contentType}) => {
-  const {ContentSection, ContentSide} = contentChecker(contentType)
+const Layout = ({contentType, products}) => {
+  const {ContentSection, ContentSide} = contentChecker(contentType, products)
 
   return (
     <MainWrapper>

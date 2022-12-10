@@ -1,12 +1,15 @@
-import {SideWrapper} from "./styles";
 import {TextHeader} from "../../../../styles/common/typography";
 import {useSideTitleGenerator} from "../../../../hooks/useSideTitleGenerator";
+import {SideWrapper} from "./styles";
+import {useRouter} from "next/router";
 
 const HeadText = () => {
     const title = useSideTitleGenerator()
+    const {pathname: p} = useRouter();
+    const hideRightBorder = p.includes('/collaborations/[collaborator]')
 
     return (
-        <SideWrapper>
+        <SideWrapper hideRightBorder={hideRightBorder}>
             <TextHeader>{title}</TextHeader>
         </SideWrapper>
     );

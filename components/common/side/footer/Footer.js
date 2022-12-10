@@ -1,5 +1,5 @@
 import {FooterWrapper, FooterWrapperTop} from "./styles";
-import {TextFooter, TextFooterTop} from "../../../../styles/common/typography";
+import {TextLight, TextLightSmall} from "../../../../styles/common/typography";
 import Switcher from "./switcher/Switcher";
 import Link from "next/link";
 
@@ -7,20 +7,20 @@ const Footer = () => {
   return (
     <div>
       <FooterWrapperTop>
-        <TextFooterTop>BASKET (1)</TextFooterTop>
-        <TextFooterTop>
+        <TextLight>BASKET (1)</TextLight>
+        <TextLight>
             <a href="https://www.instagram.com/nonoyesofcourse/" target="_blank" rel="noreferrer">INSTAGRAM</a>
-        </TextFooterTop>
-        <TextFooterTop>
+        </TextLight>
+        <TextLight>
             <Link href="/collaborations">COLLABORATIONS</Link>
-        </TextFooterTop>
+        </TextLight>
       </FooterWrapperTop>
 
       <FooterWrapper>
           <Switcher/>
-          <TextFooter><a href="https://www.ryjewsky.com/" target="_blank" rel="noreferrer">ryjewsky</a> x NNYOC</TextFooter>
-          <TextFooter>NO NO YES OF COURSE © 2023</TextFooter>
-          <TextFooter>ICELAND / RTEYKJAVIK INGÓLFSSTRÆTI 10</TextFooter>
+          <TextLightSmall><a href="https://www.ryjewsky.com/" target="_blank" rel="noreferrer">ryjewsky</a> x NNYOC</TextLightSmall>
+          <TextLightSmall>NO NO YES OF COURSE © 2023</TextLightSmall>
+          <TextLightSmall>ICELAND / RTEYKJAVIK INGÓLFSSTRÆTI 10</TextLightSmall>
       </FooterWrapper>
     </div>
   );
