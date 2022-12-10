@@ -1,13 +1,14 @@
 import styled from "styled-components";
 import {FONTSIZE, QUERIES, SPACING} from "./vars";
 
-const TextFooter = styled.p`
+const TextLightSmall = styled.p`
   font-weight: 200;
-  line-height: 1.1;
-  font-size: ${FONTSIZE.xs};
+  line-height:  ${(props) => props.b ? `1.4` : `1.1`};
+  margin-top:  ${(props) => props.mt};
+  font-size: ${(props) => props.s ? `${FONTSIZE.s}` : `${FONTSIZE.xs}`};
 `;
 
-const TextFooterTop = styled(TextFooter)`
+const TextLight = styled(TextLightSmall)`
   font-size: ${FONTSIZE.l};
   line-height: initial;
 `;
@@ -17,6 +18,7 @@ const TextHeader = styled.p`
   letter-spacing: -1px;
   line-height: 40px;
   font-size: ${FONTSIZE.xl};
+  text-transform: capitalize;
 `;
 
 const OlItem = styled.ol`
@@ -42,7 +44,7 @@ const ListItem = styled.li`
     width: 100%;
     transform: scaleX(0);
     height: 3px;
-    bottom: 0;
+    bottom: -5px;
     left: 0;
     background-color: ${({theme}) => theme.colorPrimary};;
     transform-origin: bottom right;
@@ -71,4 +73,4 @@ const ListTextExtra = styled.span`
   font-size: ${FONTSIZE.s};
 `;
 
-export {TextFooter, TextFooterTop, TextHeader, OlItem, ListItem, ListTextExtra}
+export {TextLightSmall, TextLight, TextHeader, OlItem, ListItem, ListTextExtra}
