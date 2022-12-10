@@ -7,6 +7,11 @@ const SectionWrapper = styled.section`
 const ItemsGalleryWrapper = styled.div`
   //border: 2px solid green;
   //position: absolute;
+
+  //todo fix for overflow of items on siede
+  max-height: 100vh;
+  overflow: hidden;
+  
   width: calc(100% + 15vh);
   transform: translateX(-15vh);
 `;
