@@ -4,4 +4,10 @@ const SideContent = styled.div`
   padding: 16px 24px;
 `;
 
-export {SideContent}
+const DifferenceBoxWithBorder = styled.div`
+  margin-top: 64px;
+  mix-blend-mode: difference;
+  border-top: 1px solid ${({theme}) => theme.textColor};
+`;
+
+export {SideContent, DifferenceBoxWithBorder}

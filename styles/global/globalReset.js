@@ -59,4 +59,7 @@ export const globalReset = css`
   p, ol, li {
     mix-blend-mode: difference;
   }
+  ::-webkit-scrollbar {
+    display: none;
+  }
 `;

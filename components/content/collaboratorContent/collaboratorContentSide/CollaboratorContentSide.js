@@ -10,7 +10,8 @@ const CollaboratorContentSide = () => {
 
     const data = collaboration.find(el => el.title.toUpperCase() === q.collaborator.toUpperCase())
 
-    return (<SideContent>
+    return (
+        <SideContent>
             <div>
                 <TextLight>About collaboration:</TextLight>
                 <TextLightSmall s b mt={'10px'}>{data.description}</TextLightSmall>
@@ -39,7 +40,8 @@ const CollaboratorContentSide = () => {
                 ))}
 
             </div>
-        </SideContent>);
+        </SideContent>
+    );
 };
 
 export default CollaboratorContentSide;

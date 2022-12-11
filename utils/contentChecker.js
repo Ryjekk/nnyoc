@@ -11,7 +11,7 @@ import CollaboratorContentSide
 import CollaboratorContentSection
     from "../components/content/collaboratorContent/collaboratorContentSection/CollaboratorContentSection";
 
-export const contentChecker = (contentType, products) => {
+export const contentChecker = (contentType, products, product, price) => {
     let ContentSide, ContentSection;
 
     //TODO add itemContent and 404
@@ -21,7 +21,7 @@ export const contentChecker = (contentType, products) => {
             ContentSide = <HomeContentSide products={products}/>
             break;
         case 'ItemContent':
-            ContentSection = <ItemContentSection/>
+            ContentSection = <ItemContentSection product={product} price={price}/>
             ContentSide = <ItemContentSide products={products}/>
             break;
         case 'CollaborationsContent':
