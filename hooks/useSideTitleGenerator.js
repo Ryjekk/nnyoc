@@ -8,6 +8,8 @@ export const useSideTitleGenerator = () => {
            return "Index"
        case "/collaborations":
            return "Collabs"
+       case "/item/[id]":
+           return "Index"
    }
 
    if (q.collaborator) {

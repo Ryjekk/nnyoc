@@ -8,7 +8,7 @@ const ItemsGalleryWrapper = styled.div`
   //border: 2px solid green;
   //position: absolute;
 
-  //todo fix for overflow of items on siede
+  //todo not --- this fix for overflow of items on siede
   max-height: 100vh;
   overflow: hidden;
   

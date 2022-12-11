@@ -22,7 +22,7 @@ export const contentChecker = (contentType, products) => {
             break;
         case 'ItemContent':
             ContentSection = <ItemContentSection/>
-            ContentSide = <ItemContentSide/>
+            ContentSide = <ItemContentSide products={products}/>
             break;
         case 'CollaborationsContent':
             ContentSection = <CollaborationsContentSection/>

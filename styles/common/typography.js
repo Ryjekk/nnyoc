@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import {FONTSIZE, QUERIES, SPACING} from "./vars";
 
 const TextLightSmall = styled.p`
@@ -37,7 +37,6 @@ const ListItem = styled.li`
   display: inline-block;
   position: relative;
   
-  
   &::after {
     content: '';
     position: absolute;
@@ -50,6 +49,17 @@ const ListItem = styled.li`
     transform-origin: bottom right;
     transition: transform 0.2s ease-out;
   }
+
+  ${props => props.underline && css`
+    &::after {
+       width: 100%;
+       height: 3px;
+       bottom: -5px;
+       left: 0;
+      transform: scaleX(1);
+       background-color: ${({theme}) => theme.colorPrimary};
+    }
+  `};
   
   &:hover::after {
     transform: scaleX(1);
