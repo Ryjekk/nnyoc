@@ -57,7 +57,7 @@ const ListItem = styled.li`
        bottom: -5px;
        left: 0;
       transform: scaleX(1);
-       background-color: ${({theme}) => theme.colorPrimary};
+       background-color: ${({theme}) => theme.text};
     }
   `};
   

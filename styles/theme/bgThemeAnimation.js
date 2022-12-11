@@ -13,7 +13,7 @@ export const BgThemeAnimation = styled.div`
   position: absolute;
   display: block;
   z-index: -5;
-  background-color: red;
+  //background-color: red;
   width: 100vw;
   height: 100vh;
   top: -100%;

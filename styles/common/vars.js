@@ -6,7 +6,8 @@ const QUERIES = {
 };
 
 const COLORS = {
-  colorPrimary: '#0000ff',
+  // colorPrimary: '#0000ff', //oryginal
+  colorPrimary: 'rgba(222, 141, 20)',
   // colorSecondary: '#fd652b', //oryginal
   colorSecondary: '#DE8D14',
   colorWhite: '#EEEEEE',
@@ -14,6 +15,7 @@ const COLORS = {
   colorLightGray: '#A4A4A4',
   colorDarkGray: '#606060',
 };
+
 
 const FONTS = {
   fontPrimary: 'DiatypeSemiMono',
