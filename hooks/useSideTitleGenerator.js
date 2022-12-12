@@ -6,13 +6,13 @@ export const useSideTitleGenerator = () => {
    switch (p) {
        case "/":
            return "Index"
-       case "/collaborations":
-           return "Collabs"
+       case "/collections":
+           return "Collections"
        case "/item/[id]":
            return "Index"
    }
 
-   if (q.collaborator) {
-       return q.collaborator + ' + NoNoYesOfCourse'
+   if (q.collection) {
+       return q.collection
    }
 };

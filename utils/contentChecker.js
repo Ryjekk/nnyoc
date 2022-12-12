@@ -2,16 +2,16 @@ import HomeContentSection from "../components/content/homeContent/homeContentSec
 import HomeContentSide from "../components/content/homeContent/homeContentSide/HomeContentSide";
 import ItemContentSection from "../components/content/itemContent/itemContentSection/ItemContentSection";
 import ItemContentSide from "../components/content/itemContent/itemContentSide/ItemContentSide";
-import CollaborationsContentSection
-    from "../components/content/collaborationsContent/collaborationsContentSection/CollaborationsContentSection";
-import CollaborationsContentSide
-    from "../components/content/collaborationsContent/collaborationsContentSide/CollaborationsContentSide";
-import CollaboratorContentSide
-    from "../components/content/collaboratorContent/collaboratorContentSide/CollaboratorContentSide";
-import CollaboratorContentSection
-    from "../components/content/collaboratorContent/collaboratorContentSection/CollaboratorContentSection";
+import CollectionsContentSection
+    from "../components/content/collectionsContent/collectionsContentSection/CollectionsContentSection";
+import CollectionsContentSide
+    from "../components/content/collectionsContent/collectionsContentSide/CollectionsContentSide";
+import CollectionContentSide
+    from "../components/content/collectionContent/collectionContentSide/CollectionContentSide";
+import CollectionContentSection
+    from "../components/content/collectionContent/collectionContentSection/CollectionContentSection";
 
-export const contentChecker = (contentType, products, product, price) => {
+export const contentChecker = (contentType, products, product, price, q) => {
     let ContentSide, ContentSection;
 
     //TODO add itemContent and 404
@@ -24,13 +24,13 @@ export const contentChecker = (contentType, products, product, price) => {
             ContentSection = <ItemContentSection product={product} price={price}/>
             ContentSide = <ItemContentSide products={products}/>
             break;
-        case 'CollaborationsContent':
-            ContentSection = <CollaborationsContentSection/>
-            ContentSide = <CollaborationsContentSide/>
+        case 'CollectionsContent':
+            ContentSection = <CollectionsContentSection />
+            ContentSide = <CollectionsContentSide />
             break;
-        case 'CollaboratorContent':
-            ContentSection = <CollaboratorContentSection/>
-            ContentSide = <CollaboratorContentSide/>
+        case 'CollectionContent':
+            ContentSection = <CollectionContentSection q={q}/>
+            ContentSide = <CollectionContentSide q={q}/>
             break;
         default:
             return;

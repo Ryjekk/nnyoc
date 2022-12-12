@@ -1,12 +1,12 @@
 import Layout from "../components/layout/Layout";
 import GlobalWrapper from "../components/layout/ GlobalWrapper";
 
-const Collaborations = () => {
+const Collections = () => {
     return (
         <GlobalWrapper>
-            <Layout contentType='CollaborationsContent'/>
+            <Layout contentType='CollectionsContent'/>
         </GlobalWrapper>
     );
 };
 
-export default Collaborations;
+export default Collections;

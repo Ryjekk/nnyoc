@@ -12,7 +12,7 @@ const Footer = () => {
             <a href="https://www.instagram.com/nonoyesofcourse/" target="_blank" rel="noreferrer">INSTAGRAM</a>
         </TextLight>
         <TextLight>
-            <Link href="/collaborations">COLLABORATIONS</Link>
+            <Link href="/collections">COLLECTIONS</Link>
         </TextLight>
       </FooterWrapperTop>
 

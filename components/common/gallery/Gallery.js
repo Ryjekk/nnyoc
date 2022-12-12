@@ -6,9 +6,12 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Image from "next/image";
 import {productData} from "../../../data/productData";
+import {collections} from "../../../data/collections";
 
 const Gallery = ({pid}) => {
-    const {images} = productData.find(el => el.id === pid);
+    //TODO refreshing looses query param
+    const {images} = productData.find(el => el.id === pid)
+        || collections.find(elx => elx.artist.toUpperCase() === pid);
 
     let settings = {
         dots: false,
@@ -48,7 +51,7 @@ const Gallery = ({pid}) => {
                     >
                         {/*TODO HEIGH ADJUST*/}
                         <div style={{height: '86vh'}}>
-                            <Image src={image} alt="" layout="fill" objectFit="contain"/>
+                            <Image src={image.src} alt="" layout="fill" objectFit="contain"/>
                         </div>
                     </a>
                 ))}

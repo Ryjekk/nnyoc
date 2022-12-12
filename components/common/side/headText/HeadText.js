@@ -6,7 +6,7 @@ import {useRouter} from "next/router";
 const HeadText = () => {
     const title = useSideTitleGenerator()
     const {pathname: p} = useRouter();
-    const hideRightBorder = p.includes('/collaborations/[collaborator]')
+    const hideRightBorder = p.includes('/collection/[collection]')
 
     return (
         <SideWrapper hideRightBorder={hideRightBorder}>

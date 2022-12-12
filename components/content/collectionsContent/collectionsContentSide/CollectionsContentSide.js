@@ -1,21 +1,17 @@
 //TODO this data can be fetched from rowy in pages/colaborationS
-import {collaboration} from "../../../../data/collaboration";
+import {collections} from "../../../../data/collections";
 import {ListItem, ListTextExtra, OlItem} from "../../../../styles/common/typography";
 import Link from "next/link";
 
-const CollaborationsContentSide = () => {
+const CollectionsContentSide = () => {
     return (
         <OlItem>
-            {collaboration.map(el => (
+            {collections.map(el => (
                 <ListItem key={el.id}>
                     <Link href={el.link}>
                         <span>
                             <span style={{lineHeight: "1.3"}}>
-                                {el.title} x
-                            </span>
-                                <br/>
-                            <span style={{paddingLeft: "40px"}}>
-                                NoNoYesOfCourse <ListTextExtra>[{el.release}]</ListTextExtra>
+                                {el.title} <ListTextExtra>{el.release}</ListTextExtra>
                             </span>
                         </span>
                     </Link>
@@ -25,4 +21,4 @@ const CollaborationsContentSide = () => {
     );
 };
 
-export default CollaborationsContentSide;
+export default CollectionsContentSide;

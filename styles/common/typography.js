@@ -22,8 +22,9 @@ const TextHeader = styled.p`
 `;
 
 const OlItem = styled.ol`
-  //display: flex;
-  //flex-direction: column;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
   list-style: none;
   counter-reset: item;
   margin-top: 16px;
