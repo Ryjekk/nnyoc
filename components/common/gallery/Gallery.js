@@ -7,9 +7,11 @@ import "slick-carousel/slick/slick-theme.css";
 import Image from "next/image";
 import {productData} from "../../../data/productData";
 import {collections} from "../../../data/collections";
+import {GalleryHeightWrapper} from "./styles";
+import {useRouter} from "next/router";
 
 const Gallery = ({pid}) => {
-    //TODO refreshing looses query param
+    const {pathname: p} = useRouter();
     const {images} = productData.find(el => el.id === pid)
         || collections.find(elx => elx.artist.toUpperCase() === pid);
 
@@ -38,7 +40,7 @@ const Gallery = ({pid}) => {
     }, []);
 
     return (
-        <div className="pswp-gallery" id={pid}>
+        <div id={pid}>
             <Slider {...settings}>
                 {images.map((image, index) => (
                     <a
@@ -49,10 +51,10 @@ const Gallery = ({pid}) => {
                         target="_blankx"
                         rel="noreferrer"
                     >
-                        {/*TODO HEIGH ADJUST*/}
-                        <div style={{height: '86vh'}}>
+                        {/*TODO HEIGH ADJUST on scaling doesnt look quite good */}
+                        <GalleryHeightWrapper height={p.includes('/item') ? 50 : 90}>
                             <Image src={image.src} alt="" layout="fill" objectFit="contain"/>
-                        </div>
+                        </GalleryHeightWrapper>
                     </a>
                 ))}
             </Slider>

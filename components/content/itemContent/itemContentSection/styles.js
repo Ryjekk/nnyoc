@@ -56,13 +56,19 @@ const ItemSize = styled.div`
 
 const ArrowSpan = styled.div`
   padding-left: 8px;
-  
+
   svg {
     transform: scale(1.3);
     fill: white;
     stroke: white;
     mix-blend-mode: multiply;
   }
+`;
+
+const CloseSpan = styled(ArrowSpan)`
+  position: absolute;
+  padding-left: 0;
+  right: 0;
 `;
 
 const ItemPrice = styled(ItemColor)`
@@ -90,6 +96,7 @@ export {
     SizeWrapper,
     ItemSize,
     ArrowSpan,
+    CloseSpan,
     ItemPrice,
     ItemMore,
     ItemGalleryLine
