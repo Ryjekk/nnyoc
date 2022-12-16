@@ -1,6 +1,12 @@
 import styled from "styled-components";
+import {QUERIES} from "../../../../styles/common/vars";
 
 const SectionWrapper = styled.section`
+  display: none;
+
+  @media (${QUERIES.small}) { 
+    display: initial;
+  }
   //position: relative;
 `;
 

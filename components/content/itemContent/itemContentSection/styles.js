@@ -1,14 +1,30 @@
 import styled from "styled-components";
-import {FONTSIZE} from "../../../../styles/common/vars";
+import {FONTSIZE, QUERIES} from "../../../../styles/common/vars";
 
 const ItemSectionWrapper = styled.div`
-  margin: 0 15px;
   height: 100vh;
   overflow: scroll;
+  
+   top: 0;
+   position: absolute;
+   background-color: ${({theme}) => theme.bgColor};
+   width: 100vw;
+   z-index: 10;
+   padding: 15px;
+
+  @media (${QUERIES.small}) {
+    margin: 0 15px;
+    
+    background-color: initial;
+    z-index: initial;
+    padding: 0;
+    width: initial;
+    position: relative;
+  }
 `;
 
 const ItemTitle = styled.div`
-  padding: 20px 0 0 0;
+  padding: 19px 0 0 0;
   mix-blend-mode: difference;
   border-bottom: 1px solid ${({theme}) => theme.textColor};
   font-weight: 400;
@@ -69,6 +85,10 @@ const CloseSpan = styled(ArrowSpan)`
   position: absolute;
   padding-left: 0;
   right: 0;
+
+  @media (${QUERIES.small}) { 
+    display: none;
+  }
 `;
 
 const ItemPrice = styled(ItemColor)`
