@@ -2,12 +2,13 @@ import {FooterWrapper, FooterWrapperTop} from "./styles";
 import {TextLight, TextLightSmall} from "../../../../styles/common/typography";
 import Switcher from "./switcher/Switcher";
 import Link from "next/link";
+import {redirectToCheckout} from "../../../../utils/stripe/redirectToCheckout";
 
 const Footer = () => {
   return (
     <div>
       <FooterWrapperTop>
-        <TextLight>BASKET (1)</TextLight>
+        <TextLight onClick={() => redirectToCheckout()}>CART (1)</TextLight>
         <TextLight>
             <a href="https://www.instagram.com/nonoyesofcourse/" target="_blank" rel="noreferrer">INSTAGRAM</a>
         </TextLight>
