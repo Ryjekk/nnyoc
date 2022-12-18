@@ -8,6 +8,7 @@ export const lightMode = {
   bgColor: `${COLORS.colorWhite}`,
   textColor: `${COLORS.colorWhite}`,
   textLight: `${COLORS.colorDarkGray}`,
+  itemMobileTextColor: `${COLORS.colorBlack}`,
 }
 
 export const darkMode = {
@@ -15,4 +16,5 @@ export const darkMode = {
   bgColor: `${COLORS.colorBlack}`,
   textColor: `${COLORS.colorWhite}`,
   textLight: `${COLORS.colorLightGray}`,
+  itemMobileTextColor: `${COLORS.colorWhite}`,
 }
