@@ -14,7 +14,6 @@ import CollectionContentSection
 export const contentChecker = (contentType, products, product, price, q) => {
     let ContentSide, ContentSection;
 
-    //TODO add itemContent and 404
     switch (contentType) {
         case 'HomeContent':
             ContentSection = <HomeContentSection/>;

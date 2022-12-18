@@ -1,8 +1,10 @@
+import {CollectionsSectionWrapper} from "./style";
+
 const CollectionsContentSection = () => {
     return (
-        <div>
+        <CollectionsSectionWrapper>
             🔥
-        </div>
+        </CollectionsSectionWrapper>
     );
 };
 
