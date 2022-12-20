@@ -133,6 +133,19 @@ const ItemGalleryLine = styled.div`
   }
 `;
 
+const ButtonAdd = styled.button`
+  padding: 0 20px;
+  text-transform: uppercase;
+  background-color: ${({theme}) => theme.itemMobileTextColor};
+  color: ${({theme}) => theme.colorPrimary};
+
+
+  @media (${QUERIES.small}) {
+    mix-blend-mode: difference;
+    background-color: ${({theme}) => theme.textColor};
+  }
+`;
+
 export {
     ItemSectionWrapper,
     ItemTitle,
@@ -145,7 +158,8 @@ export {
     CloseSpan,
     ItemPrice,
     ItemMore,
-    ItemGalleryLine
+    ItemGalleryLine,
+    ButtonAdd
 }
 
 

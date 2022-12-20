@@ -8,7 +8,7 @@ import {
     ItemTitle,
     ItemType,
     SizeWrapper,
-    ItemGalleryLine, CloseSpan
+    ItemGalleryLine, CloseSpan, ButtonAdd
 } from "./styles";
 import {ListTextExtra} from "../../../../styles/common/typography";
 import Gallery from "../../../common/gallery/Gallery";
@@ -50,6 +50,7 @@ const ItemContentSection = ({product: p, price}) => {
                     </svg>
                 </ArrowSpan>
                 {price.unit_amount_decimal.slice(0, -2)}.00 {price.currency.toUpperCase()}
+                <ButtonAdd>Add</ButtonAdd>
             </ItemPrice>
 
             <ItemMore>Fabric <span>&#8212;</span> {p.metadata?.fabric}</ItemMore>
