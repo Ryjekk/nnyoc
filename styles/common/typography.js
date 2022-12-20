@@ -84,4 +84,9 @@ const ListTextExtra = styled.span`
   font-size: ${FONTSIZE.s};
 `;
 
-export {TextLightSmall, TextLight, TextHeader, OlItem, ListItem, ListTextExtra}
+const CartCounter = styled.span`
+  padding-left: 5px;
+  font-weight: 200;
+`;
+
+export {TextLightSmall, TextLight, TextHeader, OlItem, ListItem, ListTextExtra, CartCounter}
