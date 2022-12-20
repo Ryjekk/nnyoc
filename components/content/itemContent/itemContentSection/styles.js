@@ -71,6 +71,7 @@ const ItemSize = styled.div`
   padding: 5px 30px 5px 30px;
   font-weight: 200;
   font-size: ${FONTSIZE.l};
+  background-color: ${props => props.size === props.sizeSelected && props.theme.colorBlue}};
 
   &:hover {
     background-color: ${({theme}) => theme.textColor};
@@ -138,8 +139,7 @@ const ButtonAdd = styled.button`
   text-transform: uppercase;
   background-color: ${({theme}) => theme.itemMobileTextColor};
   color: ${({theme}) => theme.colorPrimary};
-
-
+  
   @media (${QUERIES.small}) {
     mix-blend-mode: difference;
     background-color: ${({theme}) => theme.textColor};

@@ -13,10 +13,49 @@ import {
 import {ListTextExtra} from "../../../../styles/common/typography";
 import Gallery from "../../../common/gallery/Gallery";
 import {useRouter} from "next/router";
+import {useEffect, useRef, useState} from "react";
+import {useShoppingCart} from "../../../../store/use-shopping-cart";
+import { toast } from 'react-hot-toast';
+import {formatItemToAdd} from "../../../../utils/formatTitemToAdd";
 
 const ItemContentSection = ({product: p, price}) => {
+    //basic
     const router = useRouter();
     const sizes = p.metadata?.size?.split(',');
+    //state
+    const { cartCount, addItem } = useShoppingCart();
+    const [adding, setAdding] = useState(false);
+    const [disabled, setDisabled] = useState(false);
+    const [sizeSelected, setSize] = useState();
+
+    //refs
+    const toastId = useRef();
+    const firstRun = useRef(true);
+
+    const handleOnAddToCart = event => {
+        event.preventDefault();
+        setAdding(true);
+        toastId.current = toast.loading('Adding 1 item...');
+        setDisabled(true)
+        const itemToAdd = formatItemToAdd(p, price, sizeSelected);
+        addItem(itemToAdd);
+    };
+
+    useEffect(() => {
+        if (firstRun.current) {
+            firstRun.current = false;
+            return;
+        }
+
+        if (adding) {
+            setAdding(false);
+            toast.success(`${p.name} added`, {
+                id: toastId.current,
+            });
+        }
+
+        setDisabled(false)
+    }, [cartCount]);
 
     return (
         <ItemSectionWrapper>
@@ -39,7 +78,11 @@ const ItemContentSection = ({product: p, price}) => {
             <ItemColor>{p.metadata?.color} <ListTextExtra>[{p.metadata?.inStock}]</ListTextExtra></ItemColor>
             <SizeWrapper>
                 {sizes?.map((size, i) => (
-                    <ItemSize key={i}>{size}</ItemSize>
+                    <ItemSize
+                        key={i} onClick={(() => setSize(size))}
+                        size={size}
+                        sizeSelected={sizeSelected}
+                    >{size}</ItemSize>
                 ))}
             </SizeWrapper>
 
@@ -50,7 +93,11 @@ const ItemContentSection = ({product: p, price}) => {
                     </svg>
                 </ArrowSpan>
                 {price.unit_amount_decimal.slice(0, -2)}.00 {price.currency.toUpperCase()}
-                <ButtonAdd>Add</ButtonAdd>
+                <ButtonAdd
+                    onClick={handleOnAddToCart}
+                    disabled={adding || disabled || !sizeSelected}
+                    type="button"
+                >{adding ? 'Adding...' : 'Add'}</ButtonAdd>
             </ItemPrice>
 
             <ItemMore>Fabric <span>&#8212;</span> {p.metadata?.fabric}</ItemMore>
