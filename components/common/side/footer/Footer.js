@@ -2,7 +2,7 @@ import {FooterWrapper, FooterWrapperTop} from "./styles";
 import {TextLight, TextLightSmall} from "../../../../styles/common/typography";
 import Switcher from "./switcher/Switcher";
 import Link from "next/link";
-import {redirectToCheckout} from "../../../../utils/stripe/redirectToCheckout";
+import {redirectToCheckout} from "../../../../lib/stripe/redirectToCheckout";
 
 const Footer = () => {
   return (
