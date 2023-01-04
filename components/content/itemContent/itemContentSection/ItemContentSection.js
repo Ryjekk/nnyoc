@@ -56,6 +56,11 @@ const ItemContentSection = ({product: p, price}) => {
         setDisabled(false)
     }, [cartCount]);
 
+    useEffect(() => {
+        setSize(undefined)
+        setColor(undefined)
+    }, [router.asPath])
+
     return (
         <ItemSectionWrapper>
             <ItemTitle style={{display: 'flex', alignItems: "baseline"}}>
@@ -80,6 +85,7 @@ const ItemContentSection = ({product: p, price}) => {
             <SelectWrapper>
                 <ListTextExtra>Color*</ListTextExtra>
                 <Select
+                    value={colorSelected || ''}
                     onChange={setColor}
                     options={colors}
                     styles={{
@@ -108,6 +114,7 @@ const ItemContentSection = ({product: p, price}) => {
             <SelectWrapper>
                 <ListTextExtra>Size*</ListTextExtra>
                 <Select
+                    value={sizeSelected || ''}
                     onChange={setSize}
                     options={sizes}
                     styles={{
