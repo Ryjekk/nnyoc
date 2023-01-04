@@ -12,6 +12,7 @@ const Footer = () => {
         <div>
             <FooterWrapperTop>
                 <Link href="/cart">
+                    {/*FIXME THIS THROWS HYDRATION ERROR ON RELOAD*/}
                     <div style={{display: "flex", alignItems: "baseline"}}>
                         <TextLight>
                             CART {formatCurrency(totalPrice)}{' '}

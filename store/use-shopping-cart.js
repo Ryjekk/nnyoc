@@ -11,12 +11,13 @@ const initialCartValues = {
 const addItem = (state = {}, product = null, quantity = 0) => {
     if (quantity <= 0 || !product) return state;
 
-    let entry = state?.cartDetails?.[product.id];
+    let entry = state?.cartDetails?.[product.prodId];
 
     // Update item
     if (entry) {
         entry.quantity += quantity;
     }
+
     // Add item
     else {
         entry = {
@@ -29,7 +30,7 @@ const addItem = (state = {}, product = null, quantity = 0) => {
         ...state,
         cartDetails: {
             ...state.cartDetails,
-            [product.id]: entry,
+            [product.prodId]: entry,
         },
         cartCount: Math.max(0, state.cartCount + quantity),
         totalPrice: Math.max(state.totalPrice + product.price * quantity),
@@ -39,12 +40,12 @@ const addItem = (state = {}, product = null, quantity = 0) => {
 const removeItem = (state = {}, product = null, quantity = 0) => {
     if (quantity <= 0 || !product) return state;
 
-    let entry = state?.cartDetails?.[product.id];
+    let entry = state?.cartDetails?.[product.prodId];
 
     if (entry) {
         // Remove item
         if (quantity >= entry.quantity) {
-            const { [product.id]: id, ...details } = state.cartDetails;
+            const { [product.prodId]: id, ...details } = state.cartDetails;
             return {
                 ...state,
                 cartDetails: details,
@@ -61,7 +62,7 @@ const removeItem = (state = {}, product = null, quantity = 0) => {
                 ...state,
                 cartDetails: {
                     ...state.cartDetails,
-                    [product.id]: {
+                    [product.prodId]: {
                         ...entry,
                         quantity: entry.quantity - quantity,
                     },

@@ -1,8 +1,13 @@
+import GlobalWrapper from "../../components/layout/ GlobalWrapper";
+import CartLogos from "../../components/content/cartContent/cartLogos/CartLogos";
+import CartSummaryContent from "../../components/content/cartContent/cartSummaryContent/CartSummaryContent";
+
 const Cart = () => {
     return (
-        <div>
-            Cart
-        </div>
+        <GlobalWrapper>
+            <CartLogos/>
+            <CartSummaryContent/>
+        </GlobalWrapper>
     );
 };
 

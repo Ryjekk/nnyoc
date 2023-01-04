@@ -1,6 +1,6 @@
-export const formatCurrency = (amount = 0, currency = 'USD') =>
-    new Intl.NumberFormat('en-US', {
+export const formatCurrency = (amount = 0, currency = 'ISK') =>
+    new Intl.NumberFormat('is', {
         style: 'currency',
         currency,
-        minimumIntegerDigits: 2,
-    }).format(amount / 100);
+        minimumIntegerDigits: 4,
+    }).format(amount);

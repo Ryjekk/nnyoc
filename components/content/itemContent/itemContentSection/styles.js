@@ -51,18 +51,12 @@ const ItemDescription = styled.div`
   }
 `;
 
-const ItemColor = styled.div`
+const SelectWrapper = styled.div`
   margin: 20px 0;
-  font-size: ${FONTSIZE.xl};
 
-  @media (${QUERIES.small}) {
-    mix-blend-mode: difference;
-  }
-`;
-
-const SizeWrapper = styled.div`
-  display: flex;
-  gap: 5px;
+ * {
+   color: ${({theme}) => theme.colorPrimary};
+ }
 `;
 
 const ItemSize = styled.div`
@@ -111,9 +105,11 @@ const CloseSpan = styled(ArrowSpan)`
   }
 `;
 
-const ItemPrice = styled(ItemColor)`
+const ItemPrice = styled(SelectWrapper)`
   display: flex;
   gap: 20px;
+  font-size: ${FONTSIZE.xl};
+  mix-blend-mode: difference;
 `;
 
 const ItemMore = styled.div`
@@ -151,8 +147,7 @@ export {
     ItemTitle,
     ItemType,
     ItemDescription,
-    ItemColor,
-    SizeWrapper,
+    SelectWrapper,
     ItemSize,
     ArrowSpan,
     CloseSpan,

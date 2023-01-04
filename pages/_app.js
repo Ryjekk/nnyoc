@@ -2,11 +2,11 @@ import {DarkModeProvider} from "../context/DarkModeContext";
 import {CartProvider} from "../store/use-shopping-cart";
 
 function MyApp({Component, pageProps}) {
-    return <DarkModeProvider>
-        <CartProvider>
+    return <CartProvider>
+        <DarkModeProvider>
             <Component {...pageProps} />
-        </CartProvider>
-    </DarkModeProvider>
+        </DarkModeProvider>
+    </CartProvider>
 }
 
 export default MyApp
