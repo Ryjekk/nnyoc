@@ -19,6 +19,7 @@ const CartProductImg = styled.div`
 
 const CartTotal = styled.div`
   border: 1px solid ${({theme}) => theme.itemMobileTextColor};
+  border-top: none;
   padding: 10px;
   display: flex;
   justify-content: space-between;

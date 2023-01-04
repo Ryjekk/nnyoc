@@ -51,7 +51,7 @@ const CartFull = () => {
                         </div>
                     </CartProductWrapper>
                 ))}
-                <CartSubtotal>sss</CartSubtotal>
+                {/*<CartSubtotal>sss</CartSubtotal>*/}
                 <CartTotal>
                     <p>Total:{' '}</p>
                     <p>{formatCurrency(totalPrice)}</p>

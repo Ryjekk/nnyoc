@@ -49,4 +49,16 @@ const TitleMid = styled.p`
   letter-spacing: 1px;
 `;
 
-export {CornerLogosTL, CornerLogosTR, CornerLogosBL, CornerLogosBR , TitleMid}
+const TitleMidBottom = styled(TitleMid)`
+  bottom: 0;
+  top: auto;
+  margin-bottom: 25px;
+  border-bottom: 2px solid ${({theme}) => theme.colorPrimary};
+  
+  &:hover{
+    transform: translate(-50%, 0) scale(1.5);
+    transition: all .2s ease-in-out;
+  }
+`;
+
+export {CornerLogosTL, CornerLogosTR, CornerLogosBL, CornerLogosBR , TitleMid, TitleMidBottom}
