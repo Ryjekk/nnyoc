@@ -109,7 +109,10 @@ const ItemPrice = styled(SelectWrapper)`
   display: flex;
   gap: 20px;
   font-size: ${FONTSIZE.xl};
-  mix-blend-mode: difference;
+
+  @media (${QUERIES.small}) {
+    mix-blend-mode: difference;
+  }
 `;
 
 const ItemMore = styled.div`

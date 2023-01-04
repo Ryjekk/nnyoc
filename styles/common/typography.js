@@ -82,7 +82,10 @@ const ListItem = styled.li`
 const ListTextExtra = styled.span`
   font-weight: 100;
   font-size: ${FONTSIZE.s};
-  mix-blend-mode: difference;
+
+  @media (${QUERIES.small}) {
+    mix-blend-mode: difference;
+  }
 `;
 
 const CartCounter = styled.span`

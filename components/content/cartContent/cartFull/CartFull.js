@@ -37,6 +37,7 @@ const CartFull = () => {
                             <CartProductDetails>
                                 <p>{product.name}</p>
                                 <p>SIZE: {product.size}</p>
+                                <p>COLOR: {product.color}</p>
                                 <p>QUANTITY: {product.quantity}</p>
                             </CartProductDetails>
                             <CartItemPrice>

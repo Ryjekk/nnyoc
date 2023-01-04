@@ -1,5 +1,4 @@
-import styled from "styled-components";
-import smallLogo from "../../../../assets/logo/logoSimpleBlack.png"
+import styled from "styled-components";''
 
 const CornerLogos = styled.div`
   width: 40px;
@@ -16,26 +15,26 @@ const CornerLogos = styled.div`
 const CornerLogosTL = styled(CornerLogos)`
   top: 0;
   left: 0;
-  background-image: url(${smallLogo.src});
+  background-image: url(${({theme}) => theme.logoCheckout});
 `;
 
 const CornerLogosTR = styled(CornerLogos)`
   top: 0;
   right: 0;
-  background-image: url(${smallLogo.src});
+  background-image: url(${({theme}) => theme.logoCheckout});
   transform: scaleX(-1)
 `;
 
 const CornerLogosBL = styled(CornerLogos)`
   bottom: 0;
   left: 0;
-  background-image: url(${smallLogo.src});
+  background-image: url(${({theme}) => theme.logoCheckout});
 `;
 
 const CornerLogosBR = styled(CornerLogos)`
   bottom: 0;
   right: 0;
-  background-image: url(${smallLogo.src});
+  background-image: url(${({theme}) => theme.logoCheckout});
   transform: scaleX(-1)
 `;
 
