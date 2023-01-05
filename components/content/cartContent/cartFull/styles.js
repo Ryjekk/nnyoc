@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import {QUERIES} from "../../../../styles/common/vars";
 
 const CartFullWrapper = styled.div`
   margin: 0 auto;
@@ -37,16 +38,41 @@ const CartFullText = styled.p`
   margin: 0 auto;
 `;
 
+const CartProductDetailsWrapper = styled.div`
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  position: relative;
+`
+
 const CartProductDetails = styled.div`
   padding: 10px;
   font-weight: 200;
 `;
 
 const CartItemPrice = styled(CartProductDetails)`
+  align-self: flex-end;
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: flex-end;  
+  align-items: flex-end;
+  text-align: end;
 `;
 
-export {CartFullWrapper, CartItemPrice, CartProductDetails, CartFullText, CartProductImg, CartProductWrapper, CartTotal, CartSubtotal}
+const CloseIcon = styled.div`
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  font-weight: 200;
+`;
+
+export {
+    CartFullWrapper,
+    CartItemPrice,
+    CartProductDetails,
+    CartFullText,
+    CartProductImg,
+    CartProductWrapper,
+    CartProductDetailsWrapper,
+    CartTotal,
+    CartSubtotal,
+    CloseIcon
+}

@@ -56,6 +56,7 @@ const ItemContentSection = ({product: p, price}) => {
         setDisabled(false)
     }, [cartCount]);
 
+    //reset form select
     useEffect(() => {
         setSize(undefined)
         setColor(undefined)

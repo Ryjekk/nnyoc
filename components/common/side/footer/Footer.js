@@ -6,7 +6,7 @@ import {formatCurrency} from "../../../../utils/formatCurrency";
 import {useShoppingCart} from "../../../../store/use-shopping-cart";
 
 const Footer = () => {
-    const { totalPrice, cartCount } = useShoppingCart();
+    const {totalPrice, cartCount} = useShoppingCart();
 
     return (
         <div>

@@ -1,11 +1,11 @@
 import {
     CartFullText,
     CartFullWrapper, CartItemPrice,
-    CartProductDetails,
+    CartProductDetails, CartProductDetailsWrapper,
     CartProductImg,
     CartProductWrapper,
     CartSubtotal,
-    CartTotal
+    CartTotal, CloseIcon
 } from "./styles";
 import {formatCurrency} from "../../../../utils/formatCurrency";
 import {useShoppingCart} from "../../../../store/use-shopping-cart";
@@ -33,7 +33,7 @@ const CartFull = () => {
                                 />
                             </Link>
                         </CartProductImg>
-                        <div style={{display: "flex", justifyContent: "space-between", width: "100%"}}>
+                        <CartProductDetailsWrapper>
                             <CartProductDetails>
                                 <p>{product.name}</p>
                                 <p>SIZE: {product.size}</p>
@@ -41,20 +41,20 @@ const CartFull = () => {
                                 <p>QUANTITY: {product.quantity}</p>
                             </CartProductDetails>
                             <CartItemPrice>
-                                <div onClick={() => removeItem(product, product.quantity)}>
-                                    <p>X</p>
-                                </div>
                                 <p>
                                     {(product.quantity > 1) && <span style={{fontSize: '12px'}}>({product.quantity} X {formatCurrency(product.price)})</span>}{" "}
                                     {formatCurrency(product.quantity * product.price)}
                                 </p>
                             </CartItemPrice>
-                        </div>
+                            <CloseIcon onClick={() => removeItem(product, product.quantity)}>
+                                <p>X</p>
+                            </CloseIcon>
+                        </CartProductDetailsWrapper>
                     </CartProductWrapper>
                 ))}
                 {/*<CartSubtotal>sss</CartSubtotal>*/}
                 <CartTotal>
-                    <p>Total:{' '}</p>
+                    <p>Total:</p>
                     <p>{formatCurrency(totalPrice)}</p>
                 </CartTotal>
             </CartFullWrapper>
